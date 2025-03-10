@@ -55,7 +55,7 @@ export default function contact() {
           <div
             data-aos="fade-left"
             data-aos-duration="1100"
-            className={`w-28 h-2${darkMode ? " bg-white" : "bg-black "}`}
+            className={`w-28 h-2 ${darkMode ? " bg-white" : "bg-black "}`}
           ></div>
         </div>
         <div className="flex gap-24">
