@@ -9,18 +9,24 @@ export default function Project() {
     <>
       <div
         id="project"
-        className="flex flex-col w-[1450px] items-end gap-1 pb-18 pt-20"
-        data-aos="fade-left"
-        data-aos-duration="1100"
+        className="flex flex-col w-[1450px] items-end gap-1 pb-18 pt-20 overflow-hidden"
       >
-        <h2 className="text-3xl font-bold font-man ">personal projects</h2>
+        <h2
+          className="text-3xl font-bold font-man "
+          data-aos="fade-up"
+          data-aos-duration="1100"
+        >
+          personal projects
+        </h2>
         <div
           className={`${
             darkMode ? "bg-white w-28  h-2" : "bg-black w-28  h-2"
           }`}
+          data-aos="fade-left"
+          data-aos-duration="1100"
         ></div>
       </div>
-      <div className="w-screen h-[30%] grid grid-cols-2 grid-rows-2 gap-10 p-10 ">
+      <div className="w-screen h-[30%] grid grid-cols-2 grid-rows-2 gap-10 p-10 overflow-hidden ">
         {items.map((props, index) => {
           return (
             <div
