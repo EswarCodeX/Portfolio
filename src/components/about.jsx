@@ -108,7 +108,7 @@ export default function about() {
             >
               <img className="sm:size-10 size-7" src={props.image} alt="" />
               <div
-                className={`w-0.5  sm:h-10 h-4 ${
+                className={`w-0.5  sm:h-10 h-7 ${
                   darkMode ? " bg-white" : "bg-black "
                 }`}
               ></div>
