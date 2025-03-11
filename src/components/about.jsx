@@ -57,13 +57,13 @@ export default function about() {
       <div className="font-man flex sm:flex-row flex-col gap-20 sm:p-36 p-3 items-center  pt-16">
         <img className="size-52" src={profile} alt="" data-aos="flip-right" />
         <div className="flex flex-col gap-5">
-          <h3
+          <h1
             className="text-4xl"
             data-aos="fade-right"
             data-aos-duration="1100"
           >
             Eswar Karthik
-          </h3>
+          </h1>
           <p
             className=" sm:text-base text-sm font-extralight"
             data-aos="fade-right"
@@ -113,9 +113,9 @@ export default function about() {
                 }`}
               ></div>
               <div>
-                <h6 className="sm:text-xl text-sm font-semibold">
+                <h2 className="sm:text-xl text-sm font-semibold">
                   {props.title}
-                </h6>
+                </h2>
                 <p className="sm:text-[11px] text-[10px] font-extralight">
                   {props.description}
                 </p>

@@ -11,13 +11,13 @@ export default function Project() {
         id="project"
         className="flex flex-col w-full  items-end gap-1 pb-18 pt-0 sm:pt-20 sm:pr-14 pr-7  overflow-hidden"
       >
-        <h2
+        <h1
           className="text-3xl  font-bold font-man "
           data-aos="fade-up"
           data-aos-duration="1100"
         >
           personal projects
-        </h2>
+        </h1>
         <div
           className={`${
             darkMode ? "bg-white w-28  sm:h-2 h-1" : "bg-black w-28  h-2"
@@ -68,9 +68,9 @@ export default function Project() {
                 </ul>
               </div>
               <div className="flex flex-col gap-5">
-                <h4 className="font-bold sm:text-3xl text-2xl">
+                <h2 className="font-bold sm:text-3xl text-2xl">
                   {props.title}
-                </h4>
+                </h2>
                 <p className="text-[#808080] sm:text-sm text-xs">
                   {props.description}
                 </p>

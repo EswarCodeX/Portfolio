@@ -115,14 +115,14 @@ export default function Body() {
             />
           </span>
         </h1>
-        <h4
+        <h2
           className="sm:-rotate-90 font-bold mb-32 sm:mt-[30%] font-man text-end sm:w-auto  w-full pr-7 sm:pl-0 sm:text-base text-sm cursor-pointer"
           data-aos="fade-up"
           data-aos-duration="1100"
           onClick={toggleDarkMode}
         >
           {darkMode ? "light mode." : "dark mode."}
-        </h4>
+        </h2>
       </div>
     </>
   );
