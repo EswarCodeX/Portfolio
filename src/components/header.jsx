@@ -1,9 +1,13 @@
 import React from "react";
+import { useTheme } from "../context/ThemeContext";
 
 export default function header() {
+  const { darkMode } = useTheme();
   return (
     <>
-      <div className="w-screen h-1.5 bg-black"></div>
+      <div
+        className={` w-screen h-1.5  ${darkMode ? "bg-white" : "bg-black"}`}
+      ></div>
       <header
         className="flex justify-between sm:pt-11 pt-5 font-man"
         data-aos="fade-down"

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Body() {
   const [activeSection, setActiveSection] = useState("home");
@@ -101,7 +102,18 @@ export default function Body() {
           data-aos="fade-up"
           data-aos-duration="1100"
         >
-          front-end.<span>web(developer)_</span>
+          front-end.
+          <span>
+            {/* Style will be inherited from the parent element */}
+            <Typewriter
+              words={[`web(developer)`]}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={120}
+              deleteSpeed={70}
+            />
+          </span>
         </h1>
         <h4
           className="sm:-rotate-90 font-bold mb-32 sm:mt-[30%] font-man text-end sm:w-auto  w-full pr-7 sm:pl-0 sm:text-base text-sm cursor-pointer"
