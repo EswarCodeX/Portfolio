@@ -9,7 +9,7 @@ export default function Project() {
     <>
       <div
         id="project"
-        className="flex flex-col w-full  items-end gap-1 pb-18 pt-20 sm:pr-14 pr-7  overflow-hidden"
+        className="flex flex-col w-full  items-end gap-1 pb-18 pt-0 sm:pt-20 sm:pr-14 pr-7  overflow-hidden"
       >
         <h2
           className="text-3xl  font-bold font-man "
