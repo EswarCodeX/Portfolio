@@ -104,7 +104,7 @@ export default function Body() {
           front-end.<span>web(developer)_</span>
         </h1>
         <h4
-          className="sm:-rotate-90 font-bold mt-[30%] font-man text-end sm:w-auto  w-full pr-7 sm:pl-0 sm:text-base text-sm cursor-pointer"
+          className="sm:-rotate-90 font-bold mt-[20%] sm:mt-[30%] font-man text-end sm:w-auto  w-full pr-7 sm:pl-0 sm:text-base text-sm cursor-pointer"
           data-aos="fade-up"
           data-aos-duration="1100"
           onClick={toggleDarkMode}
