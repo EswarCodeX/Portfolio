@@ -14,31 +14,37 @@ export default function contact() {
       id: 1,
       image: figma,
       aosDuration: "700",
+      link: "https://www.figma.com/design/GukuYot7CHOsHC7dmcyiAt/Untitled?t=TQBhPGXYj2T9BtGM-1",
     },
     {
       id: 2,
       image: linkedin,
       aosDuration: "1000",
+      link: "https://www.linkedin.com/in/eswar-karthik-r-m/",
     },
     {
       id: 3,
       image: instagram,
       aosDuration: "1300",
+      link: "https://www.instagram.com/exwar._/",
     },
     {
       id: 4,
       image: github,
       aosDuration: "1600",
+      link: "https://github.com/Exwa-r",
     },
     {
       id: 5,
       image: dribbble,
       aosDuration: "1900",
+      link: "https://dribbble.com/eswar_",
     },
     {
       id: 6,
       image: youtube,
       aosDuration: "2100",
+      link: "https://www.youtube.com/@mreswarkarthik143",
     },
   ];
   return (
@@ -66,13 +72,15 @@ export default function contact() {
         <div className="sm:flex grid grid-cols-3 gap-10 sm:gap-24">
           {images.map((props, index) => {
             return (
-              <img
-                key={props.id}
-                src={props.image}
-                alt=""
-                data-aos="fade-down"
-                data-aos-duration={props.aosDuration}
-              />
+              <a href={props.link} key={index}>
+                <img
+                  key={props.id}
+                  src={props.image}
+                  alt=""
+                  data-aos="fade-down"
+                  data-aos-duration={props.aosDuration}
+                />
+              </a>
             );
           })}
         </div>

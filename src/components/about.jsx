@@ -3,6 +3,7 @@ import profile from "../assets/about/profile.png";
 import design from "../assets/about/design.svg";
 import html from "../assets/about/html.svg";
 import react from "../assets/about/react.svg";
+import adobe from "../assets/about/adobe.svg";
 import { useTheme } from "../context/ThemeContext";
 
 export default function about() {
@@ -31,9 +32,10 @@ export default function about() {
     },
     {
       id: 4,
-      image: react,
-      title: "Interface & Design",
-      description: "Create your e-commerce or blog with PHP.",
+      image: adobe,
+      title: "Adobe Expert",
+      description:
+        "Proficient in Creative Cloud, eager to learn AEM, Analytics.",
       aosDuration: "1600",
     },
   ];
@@ -78,9 +80,20 @@ export default function about() {
             data-aos="fade-right"
             data-aos-duration="1500"
           >
-            <li>LINKEDIN</li>
-            <li>GITHUB</li>
-            <li>EMAIL</li>
+            <li>
+              {" "}
+              <a href="https://www.linkedin.com/in/eswar-karthik-r-m/">
+                LINKEDIN
+              </a>{" "}
+            </li>
+            <li>
+              {" "}
+              <a href="https://github.com/Exwa-r">GITHUB</a>{" "}
+            </li>
+            <li>
+              {" "}
+              <a href="">EMAIL</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -103,7 +116,7 @@ export default function about() {
                 <h6 className="sm:text-xl text-sm font-semibold">
                   {props.title}
                 </h6>
-                <p className="sm:text-xs text-[10px] font-extralight">
+                <p className="sm:text-[11px] text-[10px] font-extralight">
                   {props.description}
                 </p>
               </div>
