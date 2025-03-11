@@ -9,10 +9,10 @@ export default function Project() {
     <>
       <div
         id="project"
-        className="flex flex-col w-[1450px] items-end gap-1 pb-18 pt-20 overflow-hidden"
+        className="flex flex-col w-full  items-end gap-1 pb-18 pt-20 sm:pr-14 pr-7  overflow-hidden"
       >
         <h2
-          className="text-3xl font-bold font-man "
+          className="sm:text-3xl text-xl font-bold font-man "
           data-aos="fade-up"
           data-aos-duration="1100"
         >
@@ -20,22 +20,22 @@ export default function Project() {
         </h2>
         <div
           className={`${
-            darkMode ? "bg-white w-28  h-2" : "bg-black w-28  h-2"
+            darkMode ? "bg-white w-28  sm:h-2 h-1" : "bg-black w-28  h-2"
           }`}
           data-aos="fade-left"
           data-aos-duration="1100"
         ></div>
       </div>
-      <div className="w-screen h-[30%] grid grid-cols-2 grid-rows-2 gap-10 p-10 overflow-hidden ">
+      <div className="w-screen h-[30%] grid grid-cols-1 sm:grid-cols-2 grid-rows-4 sm:grid-rows-2 gap-10 p-10 overflow-hidden ">
         {items.map((props, index) => {
           return (
             <div
-              key={props.id}
-              className="flex font-man gap-6"
+              key={index}
+              className="flex sm:flex-row flex-col font-man gap-6"
               data-aos={props.aos}
               data-aos-duration="1100"
             >
-              <div className="bg-[#f5f5f5] px-8  pt-10 gap-10 mb-10 rounded-lg flex flex-col ">
+              <div className={props.divStyle}>
                 <img
                   className={`${
                     darkMode ? props.imageStyledark : props.imageStylelight
@@ -68,10 +68,14 @@ export default function Project() {
                 </ul>
               </div>
               <div className="flex flex-col gap-5">
-                <h4 className="font-bold text-3xl">{props.title}</h4>
-                <p className="text-[#808080] text-sm">{props.description}</p>
+                <h4 className="font-bold sm:text-3xl text-2xl">
+                  {props.title}
+                </h4>
+                <p className="text-[#808080] sm:text-sm text-xs">
+                  {props.description}
+                </p>
                 <a href={props.link}>
-                  <p className="flex font-semibold text-lg cursor-pointer">
+                  <p className="flex font-semibold sm:text-lg text-sm cursor-pointer">
                     see project
                   </p>
                   <div className="h-0.5 w-7 bg-black"></div>

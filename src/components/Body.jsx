@@ -39,12 +39,12 @@ export default function Body() {
     <>
       <div
         id="home"
-        className={`flex justify-between -ml-24 -mt-24 items-center min-h-screen ${
+        className={`flex sm:flex-row flex-col sm:justify-between justify-evenly sm:-ml-24 -mt-24 items-center min-h-screen ${
           darkMode ? "dark:bg-black dark:text-white" : ""
         }`}
       >
         <nav>
-          <ul className="flex -rotate-90 gap-10 font-man">
+          <ul className="sm:flex hidden -rotate-90 gap-10 font-man ">
             <li
               className={`cursor-pointer transition-all ${
                 activeSection === "contact"
@@ -97,14 +97,14 @@ export default function Body() {
         </nav>
 
         <h1
-          className="font-dot text-6xl text-center mr-24 mb-10"
+          className="font-dot  flex sm:flex-row flex-col sm:text-6xl text-4xl text-center sm:mr-24 mr-0 mb-10"
           data-aos="fade-up"
           data-aos-duration="1100"
         >
-          front-end.web(developer)_
+          front-end.<span>web(developer)_</span>
         </h1>
         <h4
-          className="-rotate-90 font-bold mt-[30%] font-man cursor-pointer"
+          className="sm:-rotate-90 font-bold mt-[30%] font-man text-end sm:w-auto  w-full pr-7 sm:pl-0 sm:text-base text-sm cursor-pointer"
           data-aos="fade-up"
           data-aos-duration="1100"
           onClick={toggleDarkMode}

@@ -41,27 +41,27 @@ export default function about() {
     <>
       <div
         id="about"
-        className="font-man pl-20 pt-40"
+        className="font-man sm:pl-20 pl-7 pt-40"
         data-aos="fade-right"
         data-aos-duration="1100"
       >
-        <h1 className="font-bold text-3xl">about me</h1>
+        <h1 className="font-bold text-2xl sm:text-3xl">about me</h1>
         <div
-          className={`w-20 h-2${darkMode ? " bg-white" : "bg-black "}`}
+          className={`w-20 h-1 sm:h-2${darkMode ? " bg-white" : "bg-black "}`}
         ></div>
       </div>
-      <div className="font-man flex gap-20 p-36">
+      <div className="font-man flex sm:flex-row flex-col gap-20 sm:p-36 p-3 items-center  pt-16">
         <img className="size-52" src={profile} alt="" data-aos="flip-right" />
         <div className="flex flex-col gap-5">
           <h3
-            className="text-4xl "
+            className="sm:text-4xl text-3xl"
             data-aos="fade-right"
             data-aos-duration="1100"
           >
             Eswar Karthik
           </h3>
           <p
-            className=" font-extralight"
+            className=" sm:text-base text-sm font-extralight"
             data-aos="fade-right"
             data-aos-duration="1300"
           >
@@ -72,7 +72,7 @@ export default function about() {
             globally, coding from my home office in the peaceful interior
           </p>
           <ul
-            className="flex gap-3"
+            className="flex gap-3 sm:text-base text-sm"
             data-aos="fade-right"
             data-aos-duration="1500"
           >
@@ -82,22 +82,28 @@ export default function about() {
           </ul>
         </div>
       </div>
-      <div className="font-man flex px-24 gap-14">
+      <div className="font-man flex sm:flex-row flex-col sm:px-24 px-10 pt-12 gap-14">
         {items.map((props, index) => {
           return (
             <div
               key={props.key}
-              className="flex gap-5"
+              className="flex gap-3 sm:gap-5"
               data-aos="fade-down"
               data-aos-duration={props.aosDuration}
             >
-              <img className="size-10" src={props.image} alt="" />
+              <img className="sm:size-10 size-7" src={props.image} alt="" />
               <div
-                className={`w-0.5 h-10${darkMode ? " bg-white" : "bg-black "}`}
+                className={`w-0.5  sm:h-10 h-4${
+                  darkMode ? " bg-white" : "bg-black "
+                }`}
               ></div>
               <div>
-                <h6 className="text-xl font-semibold">{props.title}</h6>
-                <p className="text-xs font-extralight">{props.description}</p>
+                <h6 className="sm:text-xl text-sm font-semibold">
+                  {props.title}
+                </h6>
+                <p className="sm:text-xs text-[10px] font-extralight">
+                  {props.description}
+                </p>
               </div>
             </div>
           );

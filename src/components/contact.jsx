@@ -43,10 +43,13 @@ export default function contact() {
   ];
   return (
     <>
-      <div id="contact" className="flex flex-col items-center gap-28 pt-60">
+      <div
+        id="contact"
+        className="flex flex-col items-center gap-20 sm:gap-28 pt-60"
+      >
         <div className="flex flex-col items-center gap-2">
           <h1
-            className="font-man text-3xl font-bold"
+            className="font-man sm:text-3xl text-2xl font-bold"
             data-aos="fade-right"
             data-aos-duration="1100"
           >
@@ -55,10 +58,12 @@ export default function contact() {
           <div
             data-aos="fade-left"
             data-aos-duration="1100"
-            className={`w-28 h-2 ${darkMode ? " bg-white" : "bg-black "}`}
+            className={`sm:w-28 w-20 sm:h-2 h-1 ${
+              darkMode ? " bg-white" : "bg-black "
+            }`}
           ></div>
         </div>
-        <div className="flex gap-24">
+        <div className="sm:flex grid grid-cols-3 gap-10 sm:gap-24">
           {images.map((props, index) => {
             return (
               <img
@@ -73,7 +78,7 @@ export default function contact() {
         </div>
         <div>
           <h2
-            className="font-man font-semibold text-lg"
+            className="font-man font-semibold text-sm sm:text-lg"
             data-aos="fade-left"
             data-aos-duration="1100"
           >
@@ -82,7 +87,9 @@ export default function contact() {
           <div
             data-aos="fade-right"
             data-aos-duration="1100"
-            className={`w-10 h-0.5 ${darkMode ? " bg-white" : "bg-black "}`}
+            className={`sm:w-10 w-5 h-0.5 ${
+              darkMode ? " bg-white" : "bg-black "
+            }`}
           ></div>
         </div>
       </div>
