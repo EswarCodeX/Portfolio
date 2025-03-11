@@ -47,7 +47,9 @@ export default function about() {
       >
         <h1 className="font-bold text-2xl sm:text-3xl">about me</h1>
         <div
-          className={`w-20 h-1 sm:h-2${darkMode ? " bg-white" : "bg-black "}`}
+          className={` w-20 h-1 sm:h-2 ${
+            darkMode ? " bg-white" : "bg-black "
+          } `}
         ></div>
       </div>
       <div className="font-man flex sm:flex-row flex-col gap-20 sm:p-36 p-3 items-center  pt-16">
@@ -93,7 +95,7 @@ export default function about() {
             >
               <img className="sm:size-10 size-7" src={props.image} alt="" />
               <div
-                className={`w-0.5  sm:h-10 h-4${
+                className={`w-0.5  sm:h-10 h-4 ${
                   darkMode ? " bg-white" : "bg-black "
                 }`}
               ></div>

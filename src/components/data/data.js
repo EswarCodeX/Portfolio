@@ -9,7 +9,7 @@ const items = [
     title: "Travel Tro",
     link: "https://classy-gumdrop-968be0.netlify.app/",
     description:
-      "Developed a website that provides real-time and static information on local bus routes, timings, and stops in Madurai. Designed an intuitive interface for easy navigation and quick access to bus details. Optimized for performance, cross-device compatibility, and user-friendly experience to assist daily commuters.",
+      "Designed a real-time and static bus route information system for Madurai commuters. Created a user-friendly interface for quick access to routes, timings, and stops. Optimized for smooth performance across all devices, enhancing daily travel convenience.",
     image: traveltro,
     divStyle: "bg-[#f5f5f5] px-8  pt-10 gap-10 mb-10 rounded-lg flex flex-col",
     imageStyledark: "sm:w-64 w-52 sm:h-40 h-32 border border-black rounded-xl",
@@ -29,7 +29,7 @@ const items = [
     title: "Eswar International",
     link: "https://eswarinternational.netlify.app/",
     description:
-      "Developed a responsive portfolio website for an export company specializing in fruits and garlands, focusing on intuitive design, user experience, and cross-device compatibility. Ensured seamless navigation, modern aesthetics, and optimized performance to enhance user engagement.",
+      "Developed a responsive portfolio website for a fruit and garland export company, emphasizing an intuitive and engaging user experience. Focused on modern aesthetics and seamless navigation. Ensured performance optimization and cross-device compatibility for wider reach.",
     image: inter,
     divStyle:
       "bg-[#f5f5f5] px-8  pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
@@ -49,7 +49,7 @@ const items = [
     id: 3,
     title: "AI-Qads",
     description:
-      "Developed an application that extracts insights, summarizes documents, and answers queries based on content. Implemented efficient text processing algorithms to ensure accurate and relevant responses. Optimized the system to support various document formats for broader usability. Focused on performance, scalability, and user-friendly design to enhance user experience.",
+      "Built an intelligent system that extracts key insights, summarizes documents, and answers queries with precision. Leveraged efficient text processing algorithms for accuracy and speed. Optimized for multiple document formats, ensuring versatility and usability.",
     image: aiqads,
     divStyle:
       "bg-[#f5f5f5] px-8  pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
@@ -71,7 +71,7 @@ const items = [
     title: "Tesla Clone",
     link: "https://classy-gumdrop-968be0.netlify.app/",
     description:
-      "Developed a fully responsive clone of the Tesla website, replicating its modern UI/UX. Implemented smooth animations and optimized performance for a seamless user experience. Integrated reusable components, dynamic routing, and state management to enhance scalability and maintainability. Ensured cross-browser compatibility and mobile responsiveness, aligning with industry best practices.",
+      "Recreated the Tesla website with a sleek, modern UI/UX, ensuring fluid animations and top-tier performance. Integrated reusable components, dynamic routing, and state management for scalability. Designed with cross-browser compatibility and full mobile responsiveness in mind.",
     image: tesla,
     divStyle:
       "bg-[#f5f5f5] px-8  pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
