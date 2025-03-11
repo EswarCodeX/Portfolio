@@ -54,7 +54,7 @@ export default function about() {
         <img className="size-52" src={profile} alt="" data-aos="flip-right" />
         <div className="flex flex-col gap-5">
           <h3
-            className="sm:text-4xl text-3xl"
+            className="text-4xl"
             data-aos="fade-right"
             data-aos-duration="1100"
           >

@@ -45,7 +45,7 @@ export default function contact() {
     <>
       <div
         id="contact"
-        className="flex flex-col items-center gap-20 sm:gap-28 pt-60"
+        className="flex flex-col items-center gap-20 sm:gap-28 pt-32 sm:pt-60"
       >
         <div className="flex flex-col items-center gap-2">
           <h1

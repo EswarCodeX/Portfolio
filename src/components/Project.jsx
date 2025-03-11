@@ -12,7 +12,7 @@ export default function Project() {
         className="flex flex-col w-full  items-end gap-1 pb-18 pt-20 sm:pr-14 pr-7  overflow-hidden"
       >
         <h2
-          className="sm:text-3xl text-xl font-bold font-man "
+          className="text-3xl  font-bold font-man "
           data-aos="fade-up"
           data-aos-duration="1100"
         >
