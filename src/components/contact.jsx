@@ -13,36 +13,44 @@ export default function contact() {
     {
       id: 1,
       image: figma,
+      name: "figma",
       aosDuration: "700",
       link: "https://www.figma.com/design/GukuYot7CHOsHC7dmcyiAt/Untitled?t=TQBhPGXYj2T9BtGM-1",
     },
     {
       id: 2,
       image: linkedin,
+      name: "linkedin",
+
       aosDuration: "1000",
       link: "https://www.linkedin.com/in/eswar-karthik-r-m/",
     },
     {
       id: 3,
       image: instagram,
+      name: "instagram",
       aosDuration: "1300",
       link: "https://www.instagram.com/exwar._/",
     },
     {
       id: 4,
       image: github,
+      name: "github",
       aosDuration: "1600",
       link: "https://github.com/Exwa-r",
     },
     {
       id: 5,
       image: dribbble,
+      name: "dribbble",
+
       aosDuration: "1900",
       link: "https://dribbble.com/eswar_",
     },
     {
       id: 6,
       image: youtube,
+      name: "youtube",
       aosDuration: "2100",
       link: "https://www.youtube.com/@mreswarkarthik143",
     },
@@ -72,7 +80,7 @@ export default function contact() {
         <div className="sm:flex grid grid-cols-3 gap-10 sm:gap-24">
           {images.map((props, index) => {
             return (
-              <a href={props.link} key={index}>
+              <a href={props.link} key={index} aria-label={props.name}>
                 <img
                   key={props.id}
                   src={props.image}

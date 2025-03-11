@@ -7,7 +7,7 @@ const items = [
   {
     id: 1,
     title: "Travel Tro",
-    link: "https://classy-gumdrop-968be0.netlify.app/",
+    link: "#",
     description:
       "Designed a real-time and static bus route information system for Madurai commuters. Created a user-friendly interface for quick access to routes, timings, and stops. Optimized for smooth performance across all devices, enhancing daily travel convenience.",
     image: traveltro,
@@ -48,6 +48,7 @@ const items = [
   {
     id: 3,
     title: "AI-Qads",
+    link: "#",
     description:
       "Built an intelligent system that extracts key insights, summarizes documents, and answers queries with precision. Leveraged efficient text processing algorithms for accuracy and speed. Optimized for multiple document formats, ensuring versatility and usability.",
     image: aiqads,
