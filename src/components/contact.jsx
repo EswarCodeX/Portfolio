@@ -37,7 +37,7 @@ export default function contact() {
       image: github,
       name: "github",
       aosDuration: "1600",
-      link: "https://github.com/Exwa-r",
+      link: "https://github.com/EswarCodeX",
     },
     {
       id: 5,
@@ -52,7 +52,7 @@ export default function contact() {
       image: youtube,
       name: "youtube",
       aosDuration: "2100",
-      link: "https://www.youtube.com/@mreswarkarthik143",
+      link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     },
   ];
   return (

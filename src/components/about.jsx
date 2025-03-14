@@ -88,7 +88,7 @@ export default function about() {
             </li>
             <li>
               {" "}
-              <a href="https://github.com/Exwa-r">GITHUB</a>{" "}
+              <a href="https://github.com/EswarCodeX">GITHUB</a>{" "}
             </li>
             <li>
               {" "}
