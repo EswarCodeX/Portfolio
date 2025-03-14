@@ -43,7 +43,7 @@ export default function about() {
     <>
       <div
         id="about"
-        className="font-man sm:pl-20 pl-7 pt-40"
+        className="font-man sm:pl-36 pl-7 pt-40"
         data-aos="fade-right"
         data-aos-duration="1100"
       >
@@ -54,7 +54,7 @@ export default function about() {
           } `}
         ></div>
       </div>
-      <div className="font-man flex sm:flex-row flex-col gap-20 sm:p-36 p-3 items-center  pt-16">
+      <div className="font-man flex sm:flex-row flex-col gap-20 sm:px-52 sm:py-36  p-3 items-center  pt-16">
         <img className="size-52" src={profile} alt="" data-aos="flip-right" />
         <div className="flex flex-col gap-5">
           <h1
@@ -97,7 +97,7 @@ export default function about() {
           </ul>
         </div>
       </div>
-      <div className="font-man flex sm:flex-row flex-col sm:px-24 px-10 pt-12 gap-14">
+      <div className="font-man flex sm:flex-row flex-col sm:pl-52 sm:pr-10 px-10 pt-12 gap-14">
         {items.map((props, index) => {
           return (
             <div

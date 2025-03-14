@@ -45,7 +45,7 @@ export default function Body() {
         }`}
       >
         <nav>
-          <ul className="sm:flex hidden -rotate-90 gap-10 font-man ">
+          <ul className="sm:flex hidden -rotate-90 gap-10 font-man fixed z-50 ">
             <li
               className={`cursor-pointer transition-all ${
                 activeSection === "contact"
@@ -98,7 +98,7 @@ export default function Body() {
         </nav>
 
         <h1
-          className="font-dot  flex sm:flex-row flex-col sm:text-6xl text-4xl text-center sm:mr-24 mr-0 mb-10"
+          className="font-dot  flex sm:flex-row flex-col sm:text-6xl text-4xl text-center sm:ml-52 mb-10"
           data-aos="fade-up"
           data-aos-duration="1100"
         >

@@ -26,7 +26,7 @@ export default function Project() {
           data-aos-duration="1100"
         ></div>
       </div>
-      <div className="w-screen h-[30%] grid grid-cols-1 sm:grid-cols-2 grid-rows-4 sm:grid-rows-2 gap-10 p-10 overflow-hidden ">
+      <div className="w-screen h-[30%] grid grid-cols-1 sm:grid-cols-2 grid-rows-4 sm:grid-rows-2 gap-10 sm:pl-32 sm:pr-20 p-10 overflow-hidden ">
         {items.map((props, index) => {
           return (
             <div
