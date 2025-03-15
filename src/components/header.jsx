@@ -6,7 +6,7 @@ export default function header() {
   return (
     <>
       <div
-        className={` w-screen h-1.5  ${darkMode ? "bg-white" : "bg-black"}`}
+        className={` w-screen h-4  ${darkMode ? "bg-white" : "bg-black"}`}
       ></div>
       <header
         className="flex justify-between sm:pt-11 pt-5 font-man"

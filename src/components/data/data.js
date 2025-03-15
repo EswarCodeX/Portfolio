@@ -7,7 +7,8 @@ const items = [
   {
     id: 1,
     title: "Travel Tro",
-    link: "#",
+    link: "https://github.com/EswarCodeX/Travel_Tro",
+    preview: "https://travel-tro.vercel.app/",
     description:
       "Designed a real-time and static bus route information system for Madurai commuters. Created a user-friendly interface for quick access to routes, timings, and stops. Optimized for smooth performance across all devices, enhancing daily travel convenience.",
     image: traveltro,
@@ -27,7 +28,8 @@ const items = [
   {
     id: 2,
     title: "Eswar International",
-    link: "https://eswarinternational.netlify.app/",
+    link: "https://github.com/EswarCodeX/Eswar_International",
+    preview: "https://eswarinternational.netlify.app/",
     description:
       "Developed a responsive portfolio website for a fruit and garland export company, emphasizing an intuitive and engaging user experience. Focused on modern aesthetics and seamless navigation. Ensured performance optimization and cross-device compatibility for wider reach.",
     image: inter,
@@ -49,6 +51,7 @@ const items = [
     id: 3,
     title: "AI-Qads",
     link: "#",
+    preview: "#",
     description:
       "Built an intelligent system that extracts key insights, summarizes documents, and answers queries with precision. Leveraged efficient text processing algorithms for accuracy and speed. Optimized for multiple document formats, ensuring versatility and usability.",
     image: aiqads,
@@ -70,7 +73,8 @@ const items = [
   {
     id: 4,
     title: "Tesla Clone",
-    link: "https://classy-gumdrop-968be0.netlify.app/",
+    link: "https://github.com/EswarCodeX/Tesla",
+    preview: "https://classy-gumdrop-968be0.netlify.app/",
     description:
       "Recreated the Tesla website with a sleek, modern UI/UX, ensuring fluid animations and top-tier performance. Integrated reusable components, dynamic routing, and state management for scalability. Designed with cross-browser compatibility and full mobile responsiveness in mind.",
     image: tesla,

@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from "../context/ThemeContext";
 import items from "../components/data/data.js";
+import arrow from "../assets/project/preview.png";
 
 export default function Project() {
   const { darkMode } = useTheme();
@@ -74,12 +75,22 @@ export default function Project() {
                 <p className="text-[#808080] sm:text-sm text-xs">
                   {props.description}
                 </p>
-                <a href={props.link}>
-                  <p className="flex font-semibold sm:text-lg text-sm cursor-pointer">
-                    see project
-                  </p>
-                  <div className="h-0.5 w-7 bg-black"></div>
-                </a>
+                <div className="flex justify-between">
+                  <a href={props.link}>
+                    <p className="flex font-semibold sm:text-lg text-sm cursor-pointer">
+                      view code
+                    </p>
+                    <div
+                      className={`h-0.5 w-7 ${
+                        darkMode ? " bg-white" : " bg-black"
+                      }`}
+                    ></div>
+                  </a>
+                  <a href={props.preview}>
+                    <img src={arrow} className="sm:size-10 size-7" alt="" />
+                    {/* <p className="text-xs">preview</p> */}
+                  </a>
+                </div>
               </div>
             </div>
           );

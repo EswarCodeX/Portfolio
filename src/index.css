@@ -15,3 +15,8 @@
   font-style: normal;
   src: url("/fonts/Oswald.woff2") format("woff2");
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
