@@ -1,10 +1,10 @@
 import React from "react";
 import figma from "../assets/contact/figma.png";
-import github from "../assets/contact/github.png";
+import git from "../assets/contact/git.png";
 import instagram from "../assets/contact/instagram.png";
 import youtube from "../assets/contact/youtube.png";
 import linkedin from "../assets/contact/linkedin.png";
-import dribbble from "../assets/contact/dribbble.png";
+import gmail from "../assets/contact/gmail.png"
 import { useTheme } from "../context/ThemeContext";
 
 export default function contact() {
@@ -34,18 +34,18 @@ export default function contact() {
     },
     {
       id: 4,
-      image: github,
-      name: "github",
+      image: git,
+      name: "git",
       aosDuration: "1600",
       link: "https://github.com/EswarCodeX",
     },
     {
       id: 5,
-      image: dribbble,
-      name: "dribbble",
+      image: gmail,
+      name: "gmail",
 
       aosDuration: "1900",
-      link: "https://dribbble.com/eswar_",
+      link: "rmeswarkarthik.csbs@gmail.com",
     },
     {
       id: 6,
@@ -87,6 +87,7 @@ export default function contact() {
                   alt=""
                   data-aos="fade-down"
                   data-aos-duration={props.aosDuration}
+                  className="size-12"
                 />
               </a>
             );
