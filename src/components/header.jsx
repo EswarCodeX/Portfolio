@@ -15,9 +15,9 @@ export default function header() {
       >
         <h1 className="font-bold sm:text-4xl text-2xl pl-5 sm:pl-24">mrE.</h1>
         <a
-          href="Eswar_Resume.pdf"
+          href="Eswar-Resume.pdf"
           className="sm:mr-20 mr-5 cursor-pointer p-1 sm:text-base text-xs  "
-          download="Eswar_Resume.pdf"
+          download="Eswar-Resume.pdf"
         >
           Resume.Cv
         </a>
