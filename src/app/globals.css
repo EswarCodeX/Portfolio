@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-dot: var(--font-dot);
+  --font-man: var(--font-man);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111111;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  cursor: none; /* Custom cursor */
+  font-family: var(--font-man);
+}
+
+html.dark body {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

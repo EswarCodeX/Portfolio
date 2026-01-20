@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function footer() {
+export default function Footer() {
   return (
     <>
       <footer
-        className="flex justify-between font-man pt-28 pb-10 sm:pb-18"
+        className="flex justify-between bg-[#111111] font-man pt-28 pb-10 sm:pb-18"
         data-aos="fade-up"
         data-aos-duration="1100"
       >

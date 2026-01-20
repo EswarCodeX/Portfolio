@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import profile from "../assets/about/profile.png";
 import design from "../assets/about/design.svg";
@@ -5,8 +6,9 @@ import html from "../assets/about/html.svg";
 import react from "../assets/about/react.svg";
 import adobe from "../assets/about/adobe.svg";
 import { useTheme } from "../context/ThemeContext";
+import Image from "next/image";
 
-export default function about() {
+export default function About() {
   const { darkMode } = useTheme();
   const items = [
     {
@@ -55,7 +57,7 @@ export default function about() {
         ></div>
       </div>
       <div className="font-man flex sm:flex-row flex-col gap-20 sm:px-52 sm:py-36  p-3 items-center  pt-16">
-        <img className="size-52" src={profile} alt="" data-aos="flip-right" />
+        <Image className="w-52 h-52 object-cover" src={profile} alt="profile" data-aos="flip-right" />
         <div className="flex flex-col gap-5">
           <h1
             className="text-4xl"
@@ -98,15 +100,15 @@ export default function about() {
         </div>
       </div>
       <div className="font-man flex sm:flex-row flex-col sm:pl-52 sm:pr-10 px-10 pt-12 gap-14">
-        {items.map((props, index) => {
+        {items.map((props) => {
           return (
             <div
-              key={props.key}
+              key={props.id}
               className="flex gap-3 sm:gap-5"
               data-aos="fade-down"
               data-aos-duration={props.aosDuration}
             >
-              <img className="sm:size-10 size-7" src={props.image} alt="" />
+              <Image className="sm:size-10 size-7" src={props.image} alt={props.title} />
               <div
                 className={`w-0.5  sm:h-10 h-7 ${
                   darkMode ? " bg-white" : "bg-black "
