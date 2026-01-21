@@ -20,8 +20,14 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  cursor: none; /* Custom cursor */
+  cursor: auto; /* Default to auto (system cursor) for mobile */
   font-family: var(--font-man);
+}
+
+@media (min-width: 768px) {
+  body {
+    cursor: none; /* Hide system cursor on desktop to show custom cursor */
+  }
 }
 
 html.dark body {

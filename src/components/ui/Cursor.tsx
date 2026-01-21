@@ -124,7 +124,7 @@ export default function Cursor() {
       {/* Regular cursor dot */}
       <motion.div
         id="cursor-dot"
-        className="fixed w-2 h-2 bg-[#181717] border rounded-full pointer-events-none z-[9999]"
+        className="hidden md:block fixed w-2 h-2 bg-[#181717] border rounded-full pointer-events-none z-[9999]"
         style={{ transform: "translate(-50%, -50%)" }}
         animate={{
           width: isContactHover ? 128 : 8,
@@ -159,7 +159,7 @@ export default function Cursor() {
       {/* Cursor outline */}
       <motion.div
         id="cursor-outline"
-        className="fixed w-12 h-12 border-2 border-white rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out"
+        className="hidden md:block fixed w-12 h-12 border-2 border-white rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out"
         style={{ transform: "translate(-50%, -50%)" }}
         animate={{
           opacity: isContactHover ? 0 : 1,
@@ -172,7 +172,7 @@ export default function Cursor() {
       {/* Cursor text */}
       <div
         id="cursor-text"
-        className="fixed opacity-0 text-[10px] font-bold text-white pointer-events-none z-[10000] transition-opacity duration-300"
+        className="hidden md:block fixed opacity-0 text-[10px] font-bold text-white pointer-events-none z-[10000] transition-opacity duration-300"
         style={{ transform: "translate(-50%, -50%)" }}
       ></div>
     </>

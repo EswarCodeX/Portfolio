@@ -54,10 +54,10 @@ export default function Body() {
       </div>
 
       {/* Big Center Text */}
-      <h1 className="font-bold  text-[60px] sm:text-[80px] md:text-[120px] lg:text-[160px] leading-[0.9] absolute left-8 md:left-12 top-1/2 -translate-y-1/2 ">
+      <h1 className="font-bold text-[40px] sm:text-[80px] md:text-[120px] lg:text-[160px] leading-[0.9] absolute left-6 sm:left-8 md:left-12 top-1/2 -translate-y-1/2 ">
         FULLSTACK
         <br />
-        <span className="ml-10">DEVELOPER</span>
+        <span className="ml-8 sm:ml-10">DEVELOPER</span>
       </h1>
 
       {/* Bottom-left scroll indicator */}
@@ -99,17 +99,24 @@ export default function Body() {
       </div>
 
       {/* Right-side Honors label */}
+      {/* Right-side Honors label (Desktop) / Top-right (Mobile) */}
       <div
-        className="absolute bg-white top-1/2 origin-center flex gap-8 w-40 h-12 px-2 text-center items-center hoverable rounded-b-lg"
-        style={{ right: "-50px", transform: "translateY(-50%) rotate(90deg)" }}
+        className="absolute bg-white flex items-center justify-center hoverable
+                   /* Mobile Styles */
+                   top-28 right-[-30px] rounded-b-lg h-10 w-28 gap-2
+                   /* Desktop Styles */
+                   md:top-1/2 md:right-[-50px] md:h-12 md:w-40 md:gap-8  md:origin-center transform-[translateY(-50%)_rotate(90deg)] "
       >
         <p
-          className="text-base font-bold text-black tracking-widest"
-          style={{ transform: "rotate(270deg)" }}
+          className="text-black font-bold tracking-widest
+                     /* Mobile */
+                     text-xs
+                     /* Desktop */
+                     md:text-base md:transform-[rotate(270deg)]"
         >
           mrE.
         </p>
-        <p className="text-xs md:text-sm tracking-widest text-black font-medium">
+        <p className="tracking-widest text-black font-medium text-[10px] md:text-sm">
           Resume
         </p>
       </div>

@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { SmoothScrollProvider } from "@/context/SmoothScrollContext";
 import Cursor from "@/components/ui/Cursor";
+import Preloader from "@/components/ui/Preloader";
 import AOSInit from "@/components/ui/AOSInit";
 
 const manrope = Manrope({
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   title: "mrE.",
   description: "Fullstack Developer Portfolio",
   icons: {
-    icon: "../public/profile.png",
+    icon: "/profile.png",
   },
 };
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <ThemeProvider>
           <SmoothScrollProvider>
             <Cursor />
+            <Preloader />
             <AOSInit />
             {children}
           </SmoothScrollProvider>

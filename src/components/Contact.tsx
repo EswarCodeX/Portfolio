@@ -28,16 +28,16 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 px-10 bg-[#111111] min-h-screen">
-      <div className="max-w-[75vw] mx-20 ">
-        <div className="flex flex-col gap-2 mb-16">
+    <section id="contact" className="py-20 md:py-32 px-5 md:px-10 bg-[#111111] min-h-screen">
+      <div className="max-w-full md:max-w-[75vw] mx-0 md:mx-20 ">
+        <div className="flex flex-col gap-2 mb-10 md:mb-16">
           <h1 className="text-white text-sm tracking-[0.3em] uppercase opacity-50">
             Contact Me
           </h1>
           <div className="w-10 h-[1px] bg-white opacity-20"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[500px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[500px]">
           {contactLinks.map((contact) => (
             <ContactCard key={contact.id} contact={contact} />
           ))}

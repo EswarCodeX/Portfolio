@@ -61,10 +61,10 @@ export default function Project() {
 
   return (
     <section id="project" className="bg-[#111111] text-white py-20 min-h-screen overflow-hidden">
-      <div className="mx-auto px-10 md:px-20">
-        <div className="flex items-center gap-4 mb-20">
-          <span className="text-xl text-white">✱</span>
-          <h2 className="text-sm tracking-[0.4em] uppercase opacity-50 font-medium">Selected Works</h2>
+      <div className="mx-auto px-5 md:px-20">
+        <div className="flex items-center gap-4 mb-14 md:mb-20">
+          <span className="text-2xl text-white animate-[spin_8s_linear_infinite]">✱</span>
+          <h2 className=" tracking-[0.4em] uppercase opacity-50 font-medium text-sm md:text-base">Selected Works</h2>
         </div>
 
         <div className="flex flex-col border-t border-white/10">
@@ -79,7 +79,7 @@ export default function Project() {
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="group relative flex items-center justify-between py-12 md:py-20 border-b border-white/10 cursor-none"
               >
-                <h3 className="text-6xl md:text-6xl font-bold tracking-tighter transition-all duration-500 group-hover:pl-10 uppercase z-10">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter transition-all duration-500 group-hover:pl-10 uppercase z-10">
                   {item.title}
                 </h3>
                 <span className="text-lg font-mono opacity-20 uppercase tracking-widest group-hover:opacity-100 transition-opacity">
