@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Cursor() {
   const [isContactHover, setIsContactHover] = useState(false);
+  const [isInteractiveHover, setIsInteractiveHover] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -16,7 +17,6 @@ export default function Cursor() {
     let outlineX = 0;
     let outlineY = 0;
     let rafId: number | null = null;
-    let isHovering = false;
 
     const speed = 0.15;
 
@@ -51,7 +51,6 @@ export default function Cursor() {
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       
-      // Check for contact-hover class
       const isContactCard = 
         target.classList.contains("contact-hover") ||
         target.closest(".contact-hover");
@@ -69,19 +68,14 @@ export default function Cursor() {
         target.classList.contains("hoverable") ||
         target.closest(".hoverable");
 
-      if (isInteractive && !isHovering) {
-        isHovering = true;
-        dot.classList.add("scale-150");
-        outline.classList.add("scale-150", "bg-white", "mix-blend-difference");
-        hoverText.classList.remove("opacity-0");
-        hoverText.classList.add("opacity-100");
+      if (isInteractive) {
+        setIsInteractiveHover(true);
       }
     };
 
     const handleMouseOut = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       
-      // Check for contact-hover class
       const isContactCard = 
         target.classList.contains("contact-hover") ||
         target.closest(".contact-hover");
@@ -99,12 +93,8 @@ export default function Cursor() {
         target.classList.contains("hoverable") ||
         target.closest(".hoverable");
 
-      if (isInteractive && isHovering) {
-        isHovering = false;
-        dot.classList.remove("scale-150");
-        outline.classList.remove("scale-150", "bg-white", "mix-blend-difference");
-        hoverText.classList.add("opacity-0");
-        hoverText.classList.remove("opacity-100");
+      if (isInteractive) {
+        setIsInteractiveHover(false);
       }
     };
 
@@ -129,7 +119,6 @@ export default function Cursor() {
 
   return (
     <>
-      {/* Regular cursor dot */}
       <motion.div
         id="cursor-dot"
         className="hidden md:block fixed w-2 h-2 bg-[#181717] border rounded-full pointer-events-none z-9999"
@@ -137,6 +126,7 @@ export default function Cursor() {
         animate={{
           width: isContactHover ? 128 : 8,
           height: isContactHover ? 128 : 8,
+          scale: isInteractiveHover ? 1.5 : 1,
         }}
         transition={{
           type: "spring",
@@ -144,7 +134,6 @@ export default function Cursor() {
           damping: 25,
         }}
       >
-        {/* Arrow icon appears when hovering contact cards */}
         <motion.div
           className="absolute inset-0 flex items-center justify-center text-white"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -164,24 +153,25 @@ export default function Cursor() {
         </motion.div>
       </motion.div>
 
-      {/* Cursor outline */}
       <motion.div
         id="cursor-outline"
         className="hidden md:block fixed w-12 h-12 border-2 border-white rounded-full pointer-events-none z-9998"
         style={{ x: "-50%", y: "-50%" }}
         animate={{
           opacity: isContactHover ? 0 : 1,
-          scale: isClicked ? 1.5 : 1,
+          scale: isClicked ? 1.5 : (isInteractiveHover ? 1.5 : 1),
+          backgroundColor: isInteractiveHover ? "rgba(255, 255, 255, 1)" : "rgba(255, 255, 255, 0)",
+          mixBlendMode: isInteractiveHover ? "difference" : "normal" as any,
         }}
         transition={{
           duration: 0.3,
+          ease: "easeOut",
         }}
       />
 
-      {/* Cursor text */}
       <div
         id="cursor-text"
-        className="hidden md:block fixed opacity-0 text-[10px] font-bold text-white pointer-events-none z-10000 transition-opacity duration-300"
+        className={`hidden md:block fixed opacity-0 text-[10px] font-bold text-white pointer-events-none z-10000 transition-opacity duration-300 ${isInteractiveHover ? "opacity-100" : "opacity-0"}`}
         style={{ transform: "translate(-50%, -50%)" }}
       ></div>
     </>
