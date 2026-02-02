@@ -5,6 +5,7 @@ import traveltro from "@/assets/project/traveltro.png";
 import xplocode from "@/assets/project/xplocode.png";
 import inoutdesigns from "@/assets/project/inoutdesign.png";
 import aravindvk from "@/assets/project/aravindvk.png";
+import maithanam from "@/assets/project/maithanam.png";
 import { StaticImageData } from "next/image";
 
 export interface ProjectItem {
@@ -20,6 +21,7 @@ export interface ProjectItem {
   li1: string;
   li2: string;
   li3: string;
+  li4?: string;
   ulStyle: string;
   darkStyle: string;
   lightStyle: string;
@@ -34,14 +36,15 @@ const items: ProjectItem[] = [
     link: "#", 
     preview: "https://xplocode.com/", // Official company link
     description:
-      "Built and contributed frontend features for the company's official website during my internship[cite: 26, 27]. Enhanced website performance and improved UI/UX consistency across various modules to ensure a professional digital presence[cite: 27].",
+      "Built and contributed frontend features for the company's official website during my internship. Enhanced website performance and improved UI/UX consistency across various modules to ensure a professional digital presence.",
     image: xplocode, // Replace with appropriate local asset
     divStyle: "bg-[#f5f5f5] px-8 pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
     imageStyledark: "sm:w-64 w-52 border border-black rounded-xl",
     imageStylelight: "sm:w-64 w-52 border rounded-xl",
-    li1: "React", 
-    li2: "Next.js",
-    li3: "Tailwind",
+    li1: "Next.js", 
+    li2: "Tailwind",
+    li3: "Backend",
+    li4: "SEO",
     ulStyle: "flex gap-2 justify-end w-full ml-5",
     darkStyle: "rounded-xl px-2 relative bg-gray-600 text-white sm:text-base text-xs",
     lightStyle: "bg-white rounded-xl px-2 relative sm:text-base text-xs",
@@ -53,14 +56,15 @@ const items: ProjectItem[] = [
     link: "#",
     preview: "https://inoutdesigns.vercel.app/", 
     description:
-      "Developed a modern web platform for an interior design firm, focusing on high-quality visual galleries and immersive user interfaces[cite: 31]. Implemented responsive layouts to showcase architectural portfolios with high performance and seamless navigation[cite: 31].",
+      "Developed a modern web platform for an interior design firm, focusing on high-quality visual galleries and immersive user interfaces. Implemented responsive layouts to showcase architectural portfolios with high performance and seamless navigation.",
     image: inoutdesigns, // Replace with appropriate local asset
     divStyle: "bg-[#f5f5f5] px-8 pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
     imageStyledark: "sm:w-64 w-52 border border-black rounded-xl",
     imageStylelight: "sm:w-64 w-52 border rounded-xl",
-    li1: "MERN Stack",
+    li1: "Next.js",
     li2: "TypeScript",
     li3: "UI/UX",
+    li4:"Figma",
     ulStyle: "flex gap-2 justify-end w-full ml-5",
     darkStyle: "rounded-xl px-2 relative bg-gray-600 text-white sm:text-base text-xs",
     lightStyle: "bg-white rounded-xl px-2 relative sm:text-base text-xs",
@@ -72,14 +76,14 @@ const items: ProjectItem[] = [
     link: "#",
     preview: "https://aravindvk.vercel.app/", // Example preview link
     description:
-      "Built a personalized, responsive portfolio website for a professional magician. The project showcases the client's profile using clean UI, smooth animations, and optimized performance to create a polished and magical digital experience. [cite: 28, 29]",
+      "Built a personalized, responsive portfolio website for a professional magician. The project showcases the client's profile using clean UI, smooth animations, and optimized performance to create a polished and magical digital experience.",
     image: aravindvk, // Replace with appropriate local asset
     divStyle: "bg-[#f5f5f5] px-8 pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
     imageStyledark: "sm:w-64 w-52 border border-black rounded-xl",
     imageStylelight: "sm:w-64 w-52 border rounded-xl",
     li1: "Next.js",
     li2: "Tailwind",
-    li3: "Framer Motion",
+    li3: "Email.js",
     ulStyle: "flex gap-2 justify-end w-full ml-5",
     darkStyle: "rounded-xl px-2 relative bg-gray-600 text-white sm:text-base text-xs",
     lightStyle: "bg-white rounded-xl px-2 relative sm:text-base text-xs",
@@ -91,14 +95,15 @@ const items: ProjectItem[] = [
     link: "https://github.com/EswarCodeX", // Assuming your standard GitHub handle [cite: 6]
     preview: "#",
     description:
-      "Developed a comprehensive Android turf booking application featuring real-time slot availability and smooth navigation. Built a secure booking flow and a clean, optimized UI to ensure a reliable and high-quality user experience for sports enthusiasts. [cite: 23, 24, 25]",
-    image: traveltro, // Replace with appropriate local asset
+      "Developed a comprehensive Android turf booking application featuring real-time slot availability and smooth navigation. Built a secure booking flow and a clean, optimized UI to ensure a reliable and high-quality user experience for sports enthusiasts.",
+    image: maithanam, // Replace with appropriate local asset
     divStyle: "bg-[#f5f5f5] px-8 pt-10 gap-10 mb-10 rounded-lg flex flex-col pb-2 sm:pb-0",
     imageStyledark: "sm:w-64 w-52 border border-black rounded-xl",
     imageStylelight: "sm:w-64 w-52 border rounded-xl",
     li1: "React Native", 
-    li2: "Node.js",
-    li3: "MongoDB",
+    li2: "Next.js",
+    li3: "Tailwind",
+    li4: "PWA",
     ulStyle: "flex gap-2 justify-end w-full ml-5",
     darkStyle: "rounded-xl px-2 relative bg-gray-600 text-white sm:text-base text-xs",
     lightStyle: "bg-white rounded-xl px-2 relative sm:text-base text-xs",
@@ -140,6 +145,7 @@ const items: ProjectItem[] = [
     li1: "React",
     li2: "Tailwind",
     li3: "JavaScript",
+    li4: "Figma",
     ulStyle: "flex gap-2  justify-end w-full ml-5 ",
     darkStyle:
       " rounded-xl px-2  relative bg-gray-600 text-white sm:text-base text-xs",
@@ -162,6 +168,7 @@ const items: ProjectItem[] = [
     li1: "React",
     li2: "Tailwind",
     li3: "JavaScript",
+    li4: "Ollama",
     ulStyle: "flex gap-2  justify-end w-full ml-5",
     darkStyle:
       " rounded-xl px-2  relative bg-gray-600 text-white sm:text-base text-xs",

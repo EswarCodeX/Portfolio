@@ -13,11 +13,39 @@ export default function ProjectDetailClient({ project }: { project: ProjectItem 
     window.scrollTo(0, 0);
   }, []);
 
+  const handleBackClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    // Immediately reset cursor to default state
+    const dot = document.getElementById("cursor-dot");
+    const outline = document.getElementById("cursor-outline");
+    const hoverText = document.getElementById("cursor-text");
+    
+    if (dot) {
+      dot.classList.remove("scale-150");
+    }
+    if (outline) {
+      outline.classList.remove("scale-150", "bg-white", "mix-blend-difference");
+    }
+    if (hoverText) {
+      hoverText.classList.add("opacity-0");
+      hoverText.classList.remove("opacity-100");
+    }
+    
+    // Trigger page transition
+    window.dispatchEvent(new CustomEvent('pageTransitionStart'));
+    
+    // Navigate after a short delay
+    setTimeout(() => {
+      router.push("/");
+    }, 450);
+  };
+
   return (
     <main className="min-h-screen bg-[#111111] text-white selection:bg-white selection:text-black">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full p-6 md:p-8 z-50 flex justify-between items-center">
-        <Link href="/" className="text-xl md:cursor-none font-bold tracking-tighter hover:opacity-70 transition-opacity">
+        <Link href="/" onClick={handleBackClick} className="text-xl md:cursor-none font-bold tracking-tighter hover:opacity-70 transition-opacity">
           Back
         </Link>
         <span className="text-xs md:text-sm tracking-widest uppercase opacity-50">Project Detail</span>
@@ -40,12 +68,12 @@ export default function ProjectDetailClient({ project }: { project: ProjectItem 
           />
         </motion.div>
         
-        <div className="absolute inset-x-0 bottom-0 p-5 md:p-20 bg-gradient-to-t from-[#111111] to-transparent">
+        <div className="absolute inset-x-0 bottom-0 p-5 md:p-20 bg-linear-to-t from-[#111111] to-transparent">
           <motion.h1 
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="text-5xl md:text-9xl font-bold tracking-tighter uppercase break-words"
+            className="text-5xl md:text-9xl font-bold tracking-tighter uppercase wrap-break-word"
           >
             {project.title}
           </motion.h1>
@@ -75,7 +103,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectItem 
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-wrap gap-3 md:gap-4 pt-4 md:pt-8"
           >
-            {[project.li1, project.li2, project.li3].map((tech, idx) => (
+            {[project.li1, project.li2, project.li3, project.li4].map((tech, idx) => (
               <span key={idx} className="px-4 py-1.5 md:px-6 md:py-2 border border-white/10 rounded-full text-xs md:text-sm font-mono opacity-60">
                 {tech}
               </span>
@@ -138,6 +166,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectItem 
       <section className="px-5 md:px-20 py-20 md:py-40 border-t md:cursor-none border-white/10 text-center">
         <Link 
           href="/"
+          onClick={handleBackClick}
           className="group inline-block md:cursor-none"
         >
           <span className="text-xs md:text-sm uppercase tracking-[0.4em] opacity-40 mb-4 block">Close Project</span>

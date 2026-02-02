@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Cursor() {
   const [isContactHover, setIsContactHover] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
     const dot = document.getElementById("cursor-dot");
@@ -107,14 +108,21 @@ export default function Cursor() {
       }
     };
 
+    const handleMouseDown = () => setIsClicked(true);
+    const handleMouseUp = () => setIsClicked(false);
+
     window.addEventListener("mousemove", moveCursor);
     document.addEventListener("mouseover", handleMouseOver);
     document.addEventListener("mouseout", handleMouseOut);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mouseup", handleMouseUp);
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       document.removeEventListener("mouseover", handleMouseOver);
       document.removeEventListener("mouseout", handleMouseOut);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
       if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
@@ -124,8 +132,8 @@ export default function Cursor() {
       {/* Regular cursor dot */}
       <motion.div
         id="cursor-dot"
-        className="hidden md:block fixed w-2 h-2 bg-[#181717] border rounded-full pointer-events-none z-[9999]"
-        style={{ transform: "translate(-50%, -50%)" }}
+        className="hidden md:block fixed w-2 h-2 bg-[#181717] border rounded-full pointer-events-none z-9999"
+        style={{ x: "-50%", y: "-50%" }}
         animate={{
           width: isContactHover ? 128 : 8,
           height: isContactHover ? 128 : 8,
@@ -159,10 +167,11 @@ export default function Cursor() {
       {/* Cursor outline */}
       <motion.div
         id="cursor-outline"
-        className="hidden md:block fixed w-12 h-12 border-2 border-white rounded-full pointer-events-none z-[9998] transition-all duration-300 ease-out"
-        style={{ transform: "translate(-50%, -50%)" }}
+        className="hidden md:block fixed w-12 h-12 border-2 border-white rounded-full pointer-events-none z-9998"
+        style={{ x: "-50%", y: "-50%" }}
         animate={{
           opacity: isContactHover ? 0 : 1,
+          scale: isClicked ? 1.5 : 1,
         }}
         transition={{
           duration: 0.3,
@@ -172,7 +181,7 @@ export default function Cursor() {
       {/* Cursor text */}
       <div
         id="cursor-text"
-        className="hidden md:block fixed opacity-0 text-[10px] font-bold text-white pointer-events-none z-[10000] transition-opacity duration-300"
+        className="hidden md:block fixed opacity-0 text-[10px] font-bold text-white pointer-events-none z-10000 transition-opacity duration-300"
         style={{ transform: "translate(-50%, -50%)" }}
       ></div>
     </>

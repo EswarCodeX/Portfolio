@@ -8,6 +8,25 @@ export default function Body() {
   const [, setActiveSection] = useState("home");
   const { darkMode } = useTheme();
   const lenis = useSmoothScroll();
+  const [time, setTime] = useState("");
+
+  // Update time every second
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      });
+      setTime(timeString);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     // If lenis is available, use it for smoother scroll
@@ -51,6 +70,12 @@ export default function Body() {
       {/* Top-left Name */}
       <div className="absolute hoverable font-light top-8 left-8 md:top-12 md:left-12 text-base md:text-5xl tracking-wide font-man">
         Eswar Karthik
+      </div>
+
+      {/* Top-right Time */}
+      <div className="absolute hidden sm:block top-8 right-8 md:top-12 md:right-12 text-right text-[10px] md:text-sm font-semibold tracking-wider uppercase opacity-80 hoverable">
+        <div>India</div>
+        <div>{time}</div>
       </div>
 
       {/* Big Center Text */}
@@ -123,7 +148,7 @@ export default function Body() {
       </a>
 
       {/* Bottom-right status */}
-      <div className="absolute bottom-8 md:bottom-32 right-8 md:right-12 text-right ">
+      <div className="absolute bottom-8 md:bottom-32 right-8 md:right-12 text-right hoverable ">
         <div className="flex items-center gap-2 justify-end mb-1">
           <span className="text-sm md:text-4xl">
             OPEN TO WORK

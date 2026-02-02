@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 import { motion, useSpring, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import items from "../data/items";
 
 export default function Project() {
+  const router = useRouter();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   // 1. Core Position Values
@@ -73,6 +75,33 @@ export default function Project() {
               key={index} 
               href={`/projects/${item.id}`}
               className="block"
+              onClick={(e) => {
+                e.preventDefault();
+                
+                // Immediately reset cursor to default state
+                const dot = document.getElementById("cursor-dot");
+                const outline = document.getElementById("cursor-outline");
+                const hoverText = document.getElementById("cursor-text");
+                
+                if (dot) {
+                  dot.classList.remove("scale-150");
+                }
+                if (outline) {
+                  outline.classList.remove("scale-150", "bg-white", "mix-blend-difference");
+                }
+                if (hoverText) {
+                  hoverText.classList.add("opacity-0");
+                  hoverText.classList.remove("opacity-100");
+                }
+                
+                // Trigger page transition
+                window.dispatchEvent(new CustomEvent('pageTransitionStart'));
+                
+                // Navigate after white screen covers (1s)
+                setTimeout(() => {
+                  router.push(`/projects/${item.id}`);
+                }, 450);
+              }}
             >
               <div
                 onMouseEnter={() => setHoveredIndex(index)}
@@ -100,7 +129,7 @@ export default function Project() {
           y: "-50%",
           rotate: rotate,
         }}
-        className="fixed pointer-events-none z-[100]"
+        className="fixed pointer-events-none z-100"
         initial={{ scale: 0, opacity: 0 }}
         animate={{ 
           scale: hoveredIndex !== null ? 1 : 0, 

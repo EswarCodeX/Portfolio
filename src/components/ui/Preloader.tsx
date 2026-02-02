@@ -77,7 +77,7 @@ const Preloader = () => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[9990] flex flex-col items-center justify-between bg-[#111111] px-4 py-6 md:px-12 md:py-10 text-[#f4f4f4] overflow-hidden"
+      className="fixed inset-0 z-9990 flex flex-col items-center justify-between bg-[#111111] px-4 py-6 md:px-12 md:py-10 text-[#f4f4f4] overflow-hidden"
     >
       {/* Top Bar */}
       <div className="flex w-full justify-between items-start text-[10px] md:text-sm font-semibold tracking-wider uppercase opacity-80">

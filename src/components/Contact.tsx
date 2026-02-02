@@ -34,7 +34,7 @@ export default function Contact() {
           <h1 className="text-white text-sm tracking-[0.3em] uppercase opacity-50">
             Contact Me
           </h1>
-          <div className="w-10 h-[1px] bg-white opacity-20"></div>
+          <div className="w-10 h-px bg-white opacity-20"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[500px]">

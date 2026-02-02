@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { SmoothScrollProvider } from "@/context/SmoothScrollContext";
 import Cursor from "@/components/ui/Cursor";
 import Preloader from "@/components/ui/Preloader";
+import PageTransition from "@/components/ui/PageTransition";
 import AOSInit from "@/components/ui/AOSInit";
 
 const manrope = Manrope({
@@ -41,6 +42,7 @@ export default function RootLayout({
           <SmoothScrollProvider>
             <Cursor />
             <Preloader />
+            <PageTransition />
             <AOSInit />
             {children}
           </SmoothScrollProvider>
