@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ mrE. — Fullstack Developer Portfolio
 
-## Getting Started
+A premium, high-performance portfolio website built with **Next.js 16**, **TypeScript**, and **GSAP**. This site showcases my journey as a developer, featuring smooth transitions, immersive animations, and a seamless user experience.
 
-First, run the development server:
+![Portfolio Preview](public/profile.png)
 
+## ✨ Key Features
+
+- 🚀 **Buttery Smooth Scrolling** — Powered by [Lenis](https://github.com/darkroomengineering/lenis) for a refined scrolling experience.
+- 🎨 **Modern Animations** — Deep integration of **GSAP** and **Framer Motion** for micro-interactions and page transitions.
+- 🌗 **Dynamic Theme System** — Seamless switching between Light and Dark modes with custom design tokens.
+- 🖱️ **Interactive Custom Cursor** — A reactive cursor that changes state based on hovered elements.
+- 📱 **Fully Responsive** — Optimized for all devices, from desktop to mobile.
+- 🎭 **Page Transitions** — Custom SVG-based transitions for a cinematic feel.
+
+## 🛠️ Tech Stack
+
+- **Frontend:** [Next.js](https://nextjs.org/), [React 19](https://react.dev/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [GSAP](https://greensock.com/gsap/), [Framer Motion](https://www.framer.com/motion/), [AOS](https://michalsnik.github.io/aos/)
+- **Typography:** Manrope & DotGothic16 (via Google Fonts)
+- **Language:** TypeScript
+
+## 📂 Featured Projects
+
+| Project | Description | Tech Stack |
+| :--- | :--- | :--- |
+| **Xplocode Official** | Company website with optimized SEO and performance. | Next.js, Tailwind, SEO |
+| **Inout Designs** | Modern platform for interior design visual galleries. | Next.js, TS, Figma |
+| **AravindVK** | Portfolio for a professional magician with smooth animations. | Next.js, Tailwind, Email.js |
+| **Maithanam** | Turf booking application with real-time availability. | React Native, Next.js, PWA |
+| **Travel Tro** | Madurai bus route information system. | React, Tailwind, JS |
+| **Eswar International** | Export company portfolio focused on modern aesthetics. | React, Tailwind, Figma |
+| **AI-Qads** | Intelligent document insight extraction system. | React, Ollama, Tailwind |
+| **Tesla Clone** | A high-fidelity recreation of the Tesla UI/UX. | React, JS, Tailwind |
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally:
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/EswarCodeX/Portfolio.git
+cd Portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run the development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Build for production
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## 📬 Contact
 
-To learn more about Next.js, take a look at the following resources:
+Let's build something amazing together!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **GitHub:** [@EswarCodeX](https://github.com/EswarCodeX)
+- **Portfolio:** [mre-portfolio.vercel.app](https://mre-portfolio.vercel.app)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Created by Eswar Karthik ✌️
