@@ -40,3 +40,23 @@ html.dark body {
   width: 0px;
   background: transparent;
 }
+
+::selection {
+  background-color: #2bff00;
+  color: #000000;
+}
+
+html.dark ::selection {
+  background-color: #2bff00;
+  color: #000000;
+}
+
+::-moz-selection {
+  background-color: #2bff00;
+  color: #000000;
+}
+
+html.dark ::-moz-selection {
+  background-color: #2bff00;
+  color: #000000;
+}

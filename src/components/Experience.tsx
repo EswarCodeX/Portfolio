@@ -25,7 +25,7 @@ const Experience = () => {
             </p>
             
             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-              Technologies I commonly use: React, Next.js, TypeScript, Node.js, MongoDB, Figma, TailwindCSS.
+              Technologies I commonly use: React, Next.js, TypeScript, Node.js, MongoDB, Figma, AWS, OAuth, Ollama, TailwindCSS.
             </p>
           </div>
 

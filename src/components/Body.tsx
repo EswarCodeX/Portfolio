@@ -119,7 +119,7 @@ export default function Body() {
         {/* 2. SEPARATE: The Center Image/Icon (Static) */}
         {/* 'inset-0' and 'flex' joins it perfectly to the center of the relative parent */}
         <div className="absolute inset-0 flex items-center justify-center animate-[spin_8s_linear_reverse_infinite]">
-          <span className="text-4xl text-white">*</span>
+          <span className="text-2xl text-white">✱</span>
         </div>
       </div>
 

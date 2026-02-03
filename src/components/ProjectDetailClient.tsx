@@ -42,7 +42,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectItem 
   };
 
   return (
-    <main className="min-h-screen bg-[#111111] text-white selection:bg-white selection:text-black">
+    <main className="min-h-screen bg-[#111111] text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full p-6 md:p-8 z-50 flex justify-between items-center">
         <Link href="/" onClick={handleBackClick} className="text-xl md:cursor-none font-bold tracking-tighter hover:opacity-70 transition-opacity">
