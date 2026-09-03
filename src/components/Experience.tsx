@@ -25,7 +25,7 @@ const Experience = () => {
             </p>
             
             <p className="text-base sm:text-lg md:text-xl leading-relaxed opacity-90">
-              Technologies I commonly use: React, Next.js, TypeScript, Node.js, MongoDB, Figma, AWS, OAuth, Ollama, TailwindCSS.
+              Technologies I commonly use: React, Next.js, TypeScript, Node.js, React Native, Expo, Socket.IO, MongoDB, Redis, Figma, AWS, OAuth, Ollama, TailwindCSS.
             </p>
           </div>
 
@@ -34,8 +34,13 @@ const Experience = () => {
             {/* List Item 1 */}
             <div className="border-t border-[#333333] hover:border-black cursor-none transition-colors py-6 flex justify-between items-center text-base md:text-lg font-medium group hoverable">
               <span className="w-1/3 group-hover:pl-2 transition-all duration-300">Xplocode Infotech</span>
-              <span className="opacity-60">Full Stack Intern</span>
-              <span className="w-1/3 text-right">2025</span>
+              {/*<span className="opacity-60">Full Stack Intern</span>*/}
+              <span className="w-1/3 text-right">2025 - 2026</span>
+            </div>
+            <div className="border-t border-[#333333] hover:border-black cursor-none transition-colors py-6 flex justify-between items-center text-base md:text-lg font-medium group hoverable">
+              <span className="w-1/3 group-hover:pl-2 transition-all duration-300">Trustem (HALT-O)</span>
+              {/*<span className="opacity-60">Full Stack Intern</span>*/}
+              <span className="w-1/3 text-right">2026 - Present</span>
             </div>
             
             {/* Divider */}
